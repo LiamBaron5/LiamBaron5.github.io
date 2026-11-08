@@ -34,6 +34,43 @@
 
     <section id="projects" class="wrap section">
       <h2>Projects</h2>
+      <div class="featured">
+        <article class="card feature">
+          <img src="assets/ski-race.jpg" alt="Simulated skiers labeled CMA-ES, Genetic alg. and CMA-ES > Adam racing through a Giant Slalom gate on a 3D model of the Gran Risa." width="608" height="380" loading="lazy">
+          <div class="card-body">
+            <p class="status progress">In progress · with Kyle Robin</p>
+            <h3>Ski Racing-Line Optimizer</h3>
+            <p>A Giant Slalom simulator built on the real 3D terrain of the Gran Risa World Cup course in Alta Badia, used to test how evolutionary algorithms and gradient descent search for the fastest safe racing line. It brings together my years as a FIS ski racer and evolutionary computing.</p>
+            <p>The evolutionary method CMA-ES found lines 1.4 s faster than a grid-search baseline. Ablation experiments showed that most of gradient descent's gap came from biased penalty terms in the smoothed loss it relies on, not from the method itself.</p>
+            <ul class="tags" aria-label="Tools and methods">
+              <li>Python</li><li>JAX</li><li>CMA-ES</li><li>Genetic algorithm</li><li>Adam</li><li>3D terrain data</li>
+            </ul>
+            <div class="links">
+              <a class="link" href="https://github.com/krobin2005/ski-racing-line-optimizer">View on GitHub →</a>
+              <a class="link" href="https://github.com/krobin2005/ski-racing-line-optimizer/blob/main/docs/media/gran_risa_race.mp4">Watch the race simulation →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card feature">
+          <img class="diagram" src="assets/quantum-genome.png" alt="Diagram showing a chromosome of integers decoded into a three-qubit circuit of an H gate and two CNOT gates, which produces a GHZ state with fitness 1.00." width="1400" height="521" loading="lazy">
+          <div class="card-body">
+            <p class="status done">Completed</p>
+            <h3>Evolving Entangled Quantum Circuits</h3>
+            <p>A reimplementation of a 2025 paper (Bhandari et al.) that uses an evolutionary algorithm to design highly entangled quantum circuits, connecting my physics coursework with evolutionary computing. The notebook includes a small quantum simulator with built-in tests, scores circuits by Meyer-Wallach entanglement, and compares its results against the paper's published data.</p>
+            <p>Evolution usually rediscovered a two-gate RXX shortcut rather than the textbook H + CNOT Bell circuit. I also turned the notebook into a hands-on in-class activity for students with no quantum background.</p>
+            <ul class="tags" aria-label="Tools and methods">
+              <li>Python</li><li>NumPy</li><li>Evolutionary algorithms</li><li>Quantum computing</li><li>Jupyter</li>
+            </ul>
+            <div class="links">
+              <a class="link" href="https://github.com/LiamBaron5/evolving-entangled-circuits">View on GitHub →</a>
+              <a class="link" href="https://colab.research.google.com/github/LiamBaron5/evolving-entangled-circuits/blob/main/evolving_entangled_circuits.ipynb">Open in Colab →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="sub">More projects</h2>
       <div class="projects">
         <article class="card">
           <img src="assets/gradient-descent.png" alt="Contour plot of a 2D function with a red gradient descent path moving from the origin toward the minimum." width="698" height="547" loading="lazy">

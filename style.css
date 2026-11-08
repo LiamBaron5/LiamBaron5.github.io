@@ -120,6 +120,33 @@ h3 { margin: 0; font-size: 18px; line-height: 1.35; }
 }
 .link { margin-top: auto; font-weight: 600; font-size: 15px; }
 
+/* Featured projects: full-width cards with a wide image on top */
+.featured { display: grid; gap: 24px; }
+.feature img {
+  aspect-ratio: 2 / 1; object-fit: cover; object-position: center 55%;
+}
+.feature img.diagram { object-fit: contain; background: #f4f3ef; padding: 12px 20px; }
+.feature .card-body { padding: 24px 28px 26px; }
+.feature .card-body p:not(.status) { max-width: 72ch; }
+.feature h3 { font-size: 21px; }
+.status {
+  align-self: flex-start; margin: 0; padding: 2px 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
+}
+.card-body p.status.progress { background: #fdf0d8; color: #8a5a00; }
+.card-body p.status.done { background: #e2f4e8; color: #1d6b3a; }
+@media (prefers-color-scheme: dark) {
+  .card-body p.status.progress { background: #3a2d14; color: #f2c46d; }
+  .card-body p.status.done { background: #183424; color: #7fd6a0; }
+}
+.links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: auto; }
+.links .link { margin-top: 0; }
+
+@media (max-width: 640px) {
+  .feature img { aspect-ratio: 16 / 10; }
+  .feature .card-body { padding: 20px 22px 22px; }
+}
+
 /* Timeline */
 .timeline { margin: 0; padding: 0; list-style: none; }
 .timeline li {
